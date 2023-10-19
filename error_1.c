@@ -1,8 +1,8 @@
 #include "monty.h"
 
 /**
- * error_argv - user fails to give file arguments
- * Return: empty
+ * error_argv - If user doesnt give file or more than valid arguments
+ * Return: void
  **/
 void error_argv(void)
 {
@@ -12,7 +12,7 @@ void error_argv(void)
 /**
  * open_error - print message if its not possible to open the file
  * @argv: arguments received by main, ni this case te filename
- * Return: empty
+ * Return: void
  **/
 void open_error(char **argv)
 {
@@ -23,8 +23,8 @@ void open_error(char **argv)
 }
 
 /**
- * malloc_error - if cannot malloc print message
- * Return: empty
+ * malloc_error - print message if cant malloc anymore
+ * Return: void
  **/
 void malloc_error(void)
 {
@@ -33,10 +33,11 @@ void malloc_error(void)
 }
 
 /**
- * invalid_instrution - message printed if the le opens the file
- * @line: file line
- * @opcode: executed command
- * Return: empty
+ * invalid_instrution - print message if le to open the
+ * filehas an invalid instruction
+ * @line: line of file
+ * @opcode: command to execute.
+ * Return: void
  **/
 void invalid_instrution(int line, char *opcode)
 {
@@ -44,9 +45,9 @@ void invalid_instrution(int line, char *opcode)
 	exit(EXIT_FAILURE);
 }
 /**
- * pop_error - error message printed if stack is empty
+ * pop_error - print error message if the stack is empty
  * @line: line
- * Return: empty
+ * Return: void
  */
 void pop_error(unsigned int line)
 {
